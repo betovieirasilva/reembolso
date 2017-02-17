@@ -2,6 +2,7 @@ import React from 'react';
 
 import BarraMenu from './BarraMenu'
 import Categoria from './Categoria'
+import Reembolso from './Reembolso'
 
 import './App.css';
 
@@ -11,7 +12,8 @@ class App extends React.Component {
     return (
         <div>
             <BarraMenu />
-            <Categoria />
+            {/*<Categoria />*/}
+            <Reembolso />
         </div>
     )
   }

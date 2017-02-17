@@ -12,24 +12,31 @@ import { Checkbox } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
-const Categoria = () => (
+const Reembolso = () => (
     <Form horizontal>
-        <FormGroup controlId="categoria">
+        <FormGroup controlId="custo">
             <Col componentClass={ControlLabel} sm={2}>
-                Categoria
+                Custo
             </Col>
             <Col sm={10}>
-                <FormControl type="text" placeholder="Categoria" />
+                <FormControl type="text" placeholder="Custo" />
             </Col>
         </FormGroup>
-        <FormGroup controlId="descricao">
+        <FormGroup controlId="data">
             <Col componentClass={ControlLabel} sm={2}>
-                <ControlLabel>Descrição</ControlLabel>
+                Data
             </Col>
             <Col sm={10}>
-                <FormControl componentClass="textarea" placeholder="Descrição" />
+                <FormControl type="text" placeholder="01/02/2017" />
             </Col>
-
+        </FormGroup>
+        <FormGroup controlId="observacao">
+            <Col componentClass={ControlLabel} sm={2}>
+                <ControlLabel>Observação</ControlLabel>
+            </Col>
+            <Col sm={10}>
+                <FormControl componentClass="textarea" placeholder="Observação" />
+            </Col>
         </FormGroup>
         <FormGroup>
             <Col smOffset={2} sm={10}>
@@ -42,4 +49,4 @@ const Categoria = () => (
     </Form>
 )
 
-export default Categoria
+export default Reembolso
