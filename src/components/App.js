@@ -4,6 +4,14 @@ import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 import MenuItem from 'react-bootstrap/lib/MenuItem';
+import { Form } from 'react-bootstrap';
+import { FormGroup } from 'react-bootstrap';
+import { FormControl } from 'react-bootstrap';
+import { ControlLabel } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Checkbox } from 'react-bootstrap';
+import { ButtonToolbar } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 import './App.css';
 
@@ -34,6 +42,33 @@ class App extends React.Component {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+            <Form horizontal>
+                <FormGroup controlId="formHorizontalEmail">
+                    <Col componentClass={ControlLabel} sm={2}>
+                        Categoria
+                    </Col>
+                    <Col sm={10}>
+                        <FormControl type="text" placeholder="Categoria" />
+                    </Col>
+                </FormGroup>
+                <FormGroup controlId="formControlsTextarea">
+                    <Col componentClass={ControlLabel} sm={2}>
+                        <ControlLabel>Descrição</ControlLabel>
+                    </Col>
+                    <Col sm={10}>
+                        <FormControl componentClass="textarea" placeholder="Descrição" />
+                    </Col>
+
+                </FormGroup>
+                <FormGroup>
+                    <Col smOffset={2} sm={10}>
+                        <ButtonToolbar>
+                            <Button bsStyle="primary">Salvar</Button>
+                            <Button>Excluir</Button>
+                        </ButtonToolbar>
+                    </Col>
+                </FormGroup>
+            </Form>
         </div>
     )
   }
