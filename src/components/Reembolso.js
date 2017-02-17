@@ -16,7 +16,7 @@ const Reembolso = () => (
     <Form horizontal>
         <FormGroup controlId="custo">
             <Col componentClass={ControlLabel} sm={2}>
-                Custo
+                <ControlLabel>Custo</ControlLabel>
             </Col>
             <Col sm={10}>
                 <FormControl type="text" placeholder="Custo" />
@@ -24,10 +24,21 @@ const Reembolso = () => (
         </FormGroup>
         <FormGroup controlId="data">
             <Col componentClass={ControlLabel} sm={2}>
-                Data
+                <ControlLabel>Data</ControlLabel>
             </Col>
             <Col sm={10}>
                 <FormControl type="text" placeholder="01/02/2017" />
+            </Col>
+        </FormGroup>
+        <FormGroup controlId="categoria">
+            <Col componentClass={ControlLabel} sm={2}>
+                <ControlLabel>Categoria</ControlLabel>
+            </Col>
+            <Col sm={10}>
+                <FormControl componentClass="select" placeholder="Categoria">
+                    <option value="select">A</option>
+                    <option value="other">...</option>
+                </FormControl>
             </Col>
         </FormGroup>
         <FormGroup controlId="observacao">

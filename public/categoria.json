@@ -1,0 +1,19 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "categoria": "Passagem Aérea",
+      "descricao": "Voôs comerciais"
+    },
+    {
+      "id": "2",
+      "categoria": "Refeição",
+      "descricao": "Almoço  e café"
+    },
+    {
+      "id": "3",
+      "categoria": "Taxi",
+      "descricao": ""
+    }
+  ]
+}
