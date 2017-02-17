@@ -24,4 +24,7 @@ Copiar os arquivos estaticos para o projeto e importar. Exemplo: GR
 * Abra outro terminal e execute: $ json-server --watch keycloakFake/menuServer.json --port 3001
 
 ## Frameworks utilizados
+
+Para melhorar o layout
 https://react-bootstrap.github.io/introduction.html
+https://react-bootstrap.github.io/components.html
