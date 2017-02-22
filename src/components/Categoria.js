@@ -5,12 +5,13 @@ import React from 'react'
 
 import { Form } from 'react-bootstrap';
 import { FormGroup } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap';
 import { ControlLabel } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Checkbox } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+
+import FormControlBean from './FormControlBean';
 
 //https://facebook.github.io/react/docs/forms.html#controlled-components
 class Categoria extends React.Component {
@@ -63,23 +64,5 @@ class Categoria extends React.Component {
         )
     }
 }
-
-class FormControlBean extends React.Component {
-
-    inicializeBean(name, parent){
-        if(!parent.state[name]) {
-            parent.state[name] = ''
-        }
-    }
-
-    render() {
-        const parent = this.props.parent;
-        const name = this.props.name;
-        this.inicializeBean(name, parent);
-
-        return <FormControl componentClass={this.props.componentClass} name={name} type="text" value={parent.state[name]} onChange={parent.handleChange.bind(parent)} />
-    }
-}
-
 
 export default Categoria
