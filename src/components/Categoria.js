@@ -42,7 +42,7 @@ class Categoria extends React.Component {
                         Nome da Categoria
                     </Col>
                     <Col sm={10}>
-                        <FormControlBean name="categoria" state={this.state} update={this.handleChange.bind(this)} />
+                        <FormControlBean name="categoria" parent={this} />
                     </Col>
                 </FormGroup>
                 <FormGroup controlId="descricao">
@@ -69,7 +69,9 @@ class Categoria extends React.Component {
 
 class FormControlBean extends React.Component {
     render() {
-        return <FormControl name={this.props.name} type="text" value={this.props.state[this.props.name]} onChange={this.props.update} />
+        const parent = this.props.parent;
+        const name = this.props.name;
+        return <FormControl name={name} type="text" value={parent.state[name]} onChange={parent.handleChange.bind(parent)} />
     }
 }
 
