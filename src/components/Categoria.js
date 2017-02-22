@@ -17,16 +17,21 @@ class Categoria extends React.Component {
 
     constructor() {
         super();
-        this.state = { value: 'Teste'}
+        this.state = {
+            categoria: '',
+            descricao: ''
+        }
     }
 
     handleChange( event ) {
-        this.setState({value: event.target.value});
+        const name = event.target.name;
+
+        this.setState({[name]: event.target.value});
     }
 
     save() {
         //TODO: delegar ao Service o envio do dado para o backend
-        console.log('BEAN: ' + this.state.value);
+        console.log('BEAN: ' + JSON.stringify(this.state));
     }
 
     render() {
@@ -37,7 +42,7 @@ class Categoria extends React.Component {
                         Nome da Categoria
                     </Col>
                     <Col sm={10}>
-                        <FormControl type="text" placeholder="Categoria" value={this.state.value} onChange={this.handleChange.bind(this)} />
+                        <FormControl name="categoria" type="text" placeholder="Categoria" value={this.state.categoria} onChange={this.handleChange.bind(this)} />
                     </Col>
                 </FormGroup>
                 <FormGroup controlId="descricao">
@@ -45,7 +50,7 @@ class Categoria extends React.Component {
                         <ControlLabel>Descrição</ControlLabel>
                     </Col>
                     <Col sm={10}>
-                        <FormControl componentClass="textarea" placeholder="Descrição" />
+                        <FormControl name="descricao" componentClass="textarea" placeholder="Descrição" value={this.state.descricao} onChange={this.handleChange.bind(this)} />
                     </Col>
 
                 </FormGroup>
