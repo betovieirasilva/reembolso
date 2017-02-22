@@ -12,34 +12,38 @@ import { Checkbox } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
-const Categoria = () => (
-    <Form horizontal>
-        <FormGroup controlId="nome">
-            <Col componentClass={ControlLabel} sm={2}>
-                Nome da Categoria
-            </Col>
-            <Col sm={10}>
-                <FormControl type="text" placeholder="Categoria" />
-            </Col>
-        </FormGroup>
-        <FormGroup controlId="descricao">
-            <Col componentClass={ControlLabel} sm={2}>
-                <ControlLabel>Descrição</ControlLabel>
-            </Col>
-            <Col sm={10}>
-                <FormControl componentClass="textarea" placeholder="Descrição" />
-            </Col>
+class Categoria extends React.Component {
+    render() {
+        return (
+            <Form horizontal>
+                <FormGroup controlId="nome">
+                    <Col componentClass={ControlLabel} sm={2}>
+                        Nome da Categoria
+                    </Col>
+                    <Col sm={10}>
+                        <FormControl type="text" placeholder="Categoria" />
+                    </Col>
+                </FormGroup>
+                <FormGroup controlId="descricao">
+                    <Col componentClass={ControlLabel} sm={2}>
+                        <ControlLabel>Descrição</ControlLabel>
+                    </Col>
+                    <Col sm={10}>
+                        <FormControl componentClass="textarea" placeholder="Descrição" />
+                    </Col>
 
-        </FormGroup>
-        <FormGroup>
-            <Col smOffset={2} sm={10}>
-                <ButtonToolbar>
-                    <Button bsStyle="primary">Salvar</Button>
-                    <Button>Excluir</Button>
-                </ButtonToolbar>
-            </Col>
-        </FormGroup>
-    </Form>
-)
+                </FormGroup>
+                <FormGroup>
+                    <Col smOffset={2} sm={10}>
+                        <ButtonToolbar>
+                            <Button bsStyle="primary">Salvar</Button>
+                            <Button>Excluir</Button>
+                        </ButtonToolbar>
+                    </Col>
+                </FormGroup>
+            </Form>
+        )
 
+    }
+}
 export default Categoria
