@@ -17,9 +17,7 @@ class Categoria extends React.Component {
 
     constructor() {
         super();
-        this.state = {
-            descricao: ''
-        }
+        this.state = {}
     }
 
     handleChange( event ) {
@@ -49,7 +47,7 @@ class Categoria extends React.Component {
                         <ControlLabel>Descrição</ControlLabel>
                     </Col>
                     <Col sm={10}>
-                        <FormControl name="descricao" componentClass="textarea" value={this.state.descricao} onChange={this.handleChange.bind(this)} />
+                        <FormControlBean componentClass="textarea" name="descricao" parent={this} />
                     </Col>
 
                 </FormGroup>
