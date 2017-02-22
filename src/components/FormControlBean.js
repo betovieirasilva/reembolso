@@ -21,7 +21,8 @@ class FormControlBean extends React.Component {
         const name = this.props.name;
         this.inicializeBean(name, parent);
 
-        return <FormControl {...props} name={name} type="text" value={parent.state[name]} onChange={parent.handleChange.bind(parent)} />
+        //TODO: definir {...props} para egar os recursos do pai
+        return <FormControl componentClass={this.props.componentClass}  name={name} type="text" value={parent.state[name]} onChange={parent.handleChange.bind(parent)} />
     }
 }
 
