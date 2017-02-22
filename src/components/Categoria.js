@@ -11,26 +11,11 @@ import { Checkbox } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
+import FormComponentBean from './FormComponentBean';
 import FormControlBean from './FormControlBean';
 
 //https://facebook.github.io/react/docs/forms.html#controlled-components
-class Categoria extends React.Component {
-
-    constructor() {
-        super();
-        this.state = {}
-    }
-
-    handleChange( event ) {
-        const name = event.target.name;
-
-        this.setState({[name]: event.target.value});
-    }
-
-    save() {
-        //TODO: delegar ao Service o envio do dado para o backend
-        console.log('BEAN: ' + JSON.stringify(this.state));
-    }
+class Categoria extends FormComponentBean {
 
     render() {
         return (
