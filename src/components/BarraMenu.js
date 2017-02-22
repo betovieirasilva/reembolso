@@ -27,14 +27,7 @@ class BarraMenu extends React.Component {
 
     showContentMenu( item ) {
         this.hideContentMenu()
-
-        if (item === 'categoria') {
-            ReactDOM.render(<Categoria />, document.getElementById('content'))
-        } else if (item === 'reembolso') {
-            ReactDOM.render(<Reembolso />, document.getElementById('content'))
-        } else if (item === 'relatorio') {
-            ReactDOM.render(<RelatorioReembolso />, document.getElementById('content'))
-        }
+        ReactDOM.render(item, document.getElementById('content'))
     }
 
     render() {
@@ -49,10 +42,10 @@ class BarraMenu extends React.Component {
                 <Navbar.Collapse>
                     <Nav>
                         <NavDropdown eventKey={3} title="Opções" id="basic-nav-dropdown">
-                            <MenuItem onClick={() => this.showContentMenu('categoria')}>Categorias</MenuItem>
-                            <MenuItem onClick={() => this.showContentMenu('reembolso')}>Reembolso</MenuItem>
+                            <MenuItem onClick={() => this.showContentMenu(<Categoria />)}>Categorias</MenuItem>
+                            <MenuItem onClick={() => this.showContentMenu(<Reembolso />)}>Reembolso</MenuItem>
                             <MenuItem divider/>
-                            <MenuItem onClick={() => this.showContentMenu('relatorio')}>Relatório</MenuItem>
+                            <MenuItem onClick={() => this.showContentMenu(<RelatorioReembolso />)}>Relatório</MenuItem>
                         </NavDropdown>
                     </Nav>
                     <Nav pullRight>
