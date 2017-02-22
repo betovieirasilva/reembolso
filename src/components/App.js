@@ -13,10 +13,6 @@ class App extends React.Component {
     return (
         <div>
             <BarraMenu />
-            {/*<Categoria />*/}
-            {/*<Reembolso />*/}
-            {/*<RelatorioReembolso />*/}
-
             <div id="content"></div>
         </div>
     )
