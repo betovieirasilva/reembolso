@@ -42,7 +42,7 @@ class Categoria extends React.Component {
                         Nome da Categoria
                     </Col>
                     <Col sm={10}>
-                        <FormControl name="categoria" type="text" placeholder="Categoria" value={this.state.categoria} onChange={this.handleChange.bind(this)} />
+                        <FormControlBean name="categoria" state={this.state} update={this.handleChange.bind(this)} />
                     </Col>
                 </FormGroup>
                 <FormGroup controlId="descricao">
@@ -50,7 +50,7 @@ class Categoria extends React.Component {
                         <ControlLabel>Descrição</ControlLabel>
                     </Col>
                     <Col sm={10}>
-                        <FormControl name="descricao" componentClass="textarea" placeholder="Descrição" value={this.state.descricao} onChange={this.handleChange.bind(this)} />
+                        <FormControl name="descricao" componentClass="textarea" value={this.state.descricao} onChange={this.handleChange.bind(this)} />
                     </Col>
 
                 </FormGroup>
@@ -66,5 +66,12 @@ class Categoria extends React.Component {
         )
     }
 }
+
+class FormControlBean extends React.Component {
+    render() {
+        return <FormControl name={this.props.name} type="text" value={this.props.state[this.props.name]} onChange={this.props.update} />
+    }
+}
+
 
 export default Categoria
