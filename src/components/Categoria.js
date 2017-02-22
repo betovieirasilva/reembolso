@@ -18,7 +18,6 @@ class Categoria extends React.Component {
     constructor() {
         super();
         this.state = {
-            categoria: '',
             descricao: ''
         }
     }
@@ -68,9 +67,18 @@ class Categoria extends React.Component {
 }
 
 class FormControlBean extends React.Component {
+
+    inicializeBean(name, parent){
+        if(!parent.state[name]) {
+            parent.state[name] = ''
+        }
+    }
+
     render() {
         const parent = this.props.parent;
         const name = this.props.name;
+        this.inicializeBean(name, parent);
+
         return <FormControl name={name} type="text" value={parent.state[name]} onChange={parent.handleChange.bind(parent)} />
     }
 }
