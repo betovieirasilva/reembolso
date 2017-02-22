@@ -14,9 +14,9 @@ import { Button } from 'react-bootstrap';
 
 const Categoria = () => (
     <Form horizontal>
-        <FormGroup controlId="categoria">
+        <FormGroup controlId="nome">
             <Col componentClass={ControlLabel} sm={2}>
-                Categoria
+                Nome da Categoria
             </Col>
             <Col sm={10}>
                 <FormControl type="text" placeholder="Categoria" />

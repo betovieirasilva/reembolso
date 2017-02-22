@@ -14,8 +14,8 @@ class App extends React.Component {
         <div>
             <BarraMenu />
             {/*<Categoria />*/}
-            {/*<Reembolso />*/}
-            <RelatorioReembolso />
+            <Reembolso />
+            {/*<RelatorioReembolso />*/}
         </div>
     )
   }

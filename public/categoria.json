@@ -2,17 +2,17 @@
   "categorias": [
     {
       "id": "1",
-      "categoria": "Passagem Aérea",
+      "nome": "Passagem Aérea",
       "descricao": "Voôs comerciais"
     },
     {
       "id": "2",
-      "categoria": "Refeição",
+      "nome": "Refeição",
       "descricao": "Almoço  e café"
     },
     {
       "id": "3",
-      "categoria": "Taxi",
+      "nome": "Taxi",
       "descricao": ""
     }
   ]
