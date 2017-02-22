@@ -27,4 +27,5 @@ Copiar os arquivos estaticos para o projeto e importar. Exemplo: GR
 
 Para melhorar o layout
 https://react-bootstrap.github.io/introduction.html
+
 https://react-bootstrap.github.io/components.html
