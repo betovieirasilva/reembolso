@@ -12,7 +12,23 @@ import { Checkbox } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 
+//https://facebook.github.io/react/docs/forms.html#controlled-components
 class Categoria extends React.Component {
+
+    constructor() {
+        super();
+        this.state = { value: 'Teste'}
+    }
+
+    handleChange( event ) {
+        this.setState({value: event.target.value});
+    }
+
+    save() {
+        //TODO: delegar ao Service o envio do dado para o backend
+        console.log('BEAN: ' + this.state.value);
+    }
+
     render() {
         return (
             <Form horizontal>
@@ -21,7 +37,7 @@ class Categoria extends React.Component {
                         Nome da Categoria
                     </Col>
                     <Col sm={10}>
-                        <FormControl type="text" placeholder="Categoria" />
+                        <FormControl type="text" placeholder="Categoria" value={this.state.value} onChange={this.handleChange.bind(this)} />
                     </Col>
                 </FormGroup>
                 <FormGroup controlId="descricao">
@@ -36,14 +52,14 @@ class Categoria extends React.Component {
                 <FormGroup>
                     <Col smOffset={2} sm={10}>
                         <ButtonToolbar>
-                            <Button bsStyle="primary">Salvar</Button>
+                            <Button bsStyle="primary" onClick={this.save.bind(this)}>Salvar</Button>
                             <Button>Excluir</Button>
                         </ButtonToolbar>
                     </Col>
                 </FormGroup>
             </Form>
         )
-
     }
 }
+
 export default Categoria
