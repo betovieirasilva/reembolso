@@ -41,7 +41,7 @@ class BarraMenu extends React.Component {
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
-                        <NavDropdown eventKey={3} title="Opções" id="basic-nav-dropdown">
+                        <NavDropdown title="Opções" id="basic-nav-dropdown">
                             <MenuItem onClick={() => this.showContentMenu(<Categoria />)}>Categorias</MenuItem>
                             <MenuItem onClick={() => this.showContentMenu(<Reembolso />)}>Reembolso</MenuItem>
                             <MenuItem divider/>
