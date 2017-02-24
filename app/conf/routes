@@ -1,4 +1,6 @@
 GET            /                                                              reembolso.utils.PingController.home()
 GET            /ping                                                          reembolso.utils.PingController.ping()
 
+POST           /api/categorias                                                reembolso.cadastros.categoria.CategoriaController.save()
+
 GET            /assets/*file                                                  controllers.Assets.at(path="/public", file)

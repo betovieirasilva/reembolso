@@ -9,6 +9,7 @@ import play.mvc.Result;
 public class PingController extends Controller {
 
     public static Result ping() {
+        System.out.print("PING");
         return ok("OK");
     }
 
