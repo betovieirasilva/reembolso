@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project">
+
+	<import file="build-reembolso-app.xml" />
+
+	<target name="generate-q" description="Gera arquivos Q do QueryDsl">
+        <javac srcdir="app" classpathref="reembolso-app.module.production.classpath" includeantruntime="true">
+            <compilerarg value="-proc:only"/>
+			<compilerarg value="-processor"/>
+			<compilerarg value="com.mysema.query.apt.jpa.JPAAnnotationProcessor"/>
+			<compilerarg value="-s"/>
+			<compilerarg value="app"/>
+		</javac>
+    	
+    </target>
+
+</project>
