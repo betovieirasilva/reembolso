@@ -1,17 +1,17 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
-node_modules
+front/node_modules
 
 # testing
-coverage
+front/coverage
 
 # production
-build
+front/build
 
 # misc
-.DS_Store
-.env
-npm-debug.log
+front/.DS_Store
+front/.env
+front/npm-debug.log
 
 .idea

@@ -18,8 +18,8 @@ Copiar os arquivos estaticos para o projeto e importar. Exemplo: GR
 * json-server --watch dataFake/data.json --port 3001
 
 
-## Para subir o projeto em dev execute os seguintes passos
-* Vá para o diretório do projeto e execute: $ yarnpkg install
+## Para subir o projeto Front em dev execute os seguintes passos
+* Vá para o diretório "front" do projeto e execute: $ yarnpkg install
 * Para subir o projeto, execute: $ yarnpkg start
 * Abra outro terminal e execute: $ json-server --watch keycloakFake/menuServer.json --port 3001
 
