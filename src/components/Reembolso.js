@@ -40,10 +40,10 @@ class Reembolso extends FormComponentBean {
                         <ControlLabel>Categoria</ControlLabel>
                     </Col>
                     <Col sm={10}>
-                        <FormControl componentClass="select" placeholder="Categoria">
+                        <FormControlBean name="categoria" componentClass="select" parent={this}>
                             <option value="select">A</option>
                             <option value="other">...</option>
-                        </FormControl>
+                        </FormControlBean>
                     </Col>
                 </FormGroup>
                 <FormGroup controlId="observacao">
