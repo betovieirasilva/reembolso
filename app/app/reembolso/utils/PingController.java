@@ -11,4 +11,8 @@ public class PingController extends Controller {
     public static Result ping() {
         return ok("OK");
     }
+
+    public static Result home(){
+        return ok("home");
+    }
 }

@@ -1,3 +1,4 @@
+GET            /                                                              reembolso.utils.PingController.home()
 GET            /ping                                                          reembolso.utils.PingController.ping()
 
 GET            /assets/*file                                                  controllers.Assets.at(path="/public", file)
