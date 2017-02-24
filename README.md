@@ -42,7 +42,9 @@ https://react-bootstrap.github.io/components.html
 
 * Depois disso execute o "dependencies.sh"
 
-#### Cri o Banco de Dados com MySQL ####
+* Marque os diretórios app/app e app/conf como "Source Root"
+
+#### Crie o Banco de Dados com MySQL ####
 * Mysql - (5.6.x) - instalar com usuário root e senha 1 
 * > Para usuários linux, [instalar o mysql](http://www.k19.com.br/artigos/como-instalar-o-mysql-server-no-ubuntu-13-10/) com
 * > $ sudo apt-get install mysql-server
